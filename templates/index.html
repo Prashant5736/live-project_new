@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Predictor</title>
+    <style>
+        /* General page styles */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container box */
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 350px;
+        }
+
+        /* Heading styles */
+        h1 {
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Input field styles */
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Button styles */
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Admission Predictor</h1>
+        <p>Enter your details to check your chance of admission</p>
+
+        <form action="/predict" method="post">
+            <div class="input-group">
+                <label>GRE Score:</label>
+                <input type="number" name="gre" required >
+            </div>
+
+            <div class="input-group">
+                <label>TOEFL Score:</label>
+                <input type="number" name="toefl" required>
+            </div>
+
+            <div class="input-group">
+                <label>University Rating:</label>
+                <input type="number" name="rating" required>
+            </div>
+
+            <div class="input-group">
+                <label>SOP:</label>
+                <input type="number" step="0.1" name="sop" required>
+            </div>
+
+            <div class="input-group">
+                <label>LOR:</label>
+                <input type="number" step="0.1" name="lor" required>
+            </div>
+
+            <div class="input-group">
+                <label>CGPA:</label>
+                <input type="number" step="0.1" name="cgpa" required>
+            </div>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+
+</body>
+</html>
