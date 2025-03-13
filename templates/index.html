@@ -85,32 +85,32 @@
         <form action="/predict" method="post">
             <div class="input-group">
                 <label>GRE Score:</label>
-                <input type="number" name="gre" required >
+                <input type="number" name="gre" placeholder="Enter your GRE score (260 to 340)" required  >
             </div>
 
             <div class="input-group">
                 <label>TOEFL Score:</label>
-                <input type="number" name="toefl" required>
+                <input type="number" name="toefl" placeholder="Enter your TOEFL score (0 to 120)" required>
             </div>
 
             <div class="input-group">
                 <label>University Rating:</label>
-                <input type="number" name="rating" required>
+                <input type="number" name="rating" placeholder="Enter your University Rating (1 to 5)" required>
             </div>
 
             <div class="input-group">
                 <label>SOP:</label>
-                <input type="number" step="0.1" name="sop" required>
+                <input type="number" step="0.1" name="sop" placeholder="Enter your SOP (1 to 5)" required>
             </div>
 
             <div class="input-group">
                 <label>LOR:</label>
-                <input type="number" step="0.1" name="lor" required>
+                <input type="number" step="0.1" name="lor" placeholder="Enter your LOR (1 to 5)" required>
             </div>
 
             <div class="input-group">
                 <label>CGPA:</label>
-                <input type="number" step="0.1" name="cgpa" required>
+                <input type="number" step="0.1" name="cgpa" placeholder="Enter your CGPA (1 to 10)" required>
             </div>
 
             <button type="submit">Predict</button>
